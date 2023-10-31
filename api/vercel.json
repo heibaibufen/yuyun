@@ -14,7 +14,7 @@
     },
     {
       "source": "/api4/(.*)",
-      "destination": "/api3/proxy"
+      "destination": "/api4/proxy"
     }
   ]
 }
