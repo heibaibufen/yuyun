@@ -2,19 +2,19 @@
   "rewrites": [
     {
       "source": "/api1/(.*)",
-      "destination": "/api1/proxy"
+      "destination": "/api1"
     },
     {
       "source": "/api2/(.*)",
-      "destination": "/api2/proxy"
+      "destination": "/api2"
     },
     {
       "source": "/api3/(.*)",
-      "destination": "/api3/proxy"
+      "destination": "/api3"
     },
     {
       "source": "/api4/(.*)",
-      "destination": "/api4/proxy"
+      "destination": "/api4"
     }
   ]
 }
