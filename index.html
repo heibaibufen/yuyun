@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | yuyunweb</title>
+    <title>Unity WebGL Player | yuyun</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1366 height=766 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">yuyunweb</div>
+        <div id="unity-build-title">yuyun</div>
       </div>
     </div>
     <script src="./recorder.wav.min.js"></script>
@@ -58,14 +58,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/yuyunweb.loader.js";
+      var loaderUrl = buildUrl + "/web.loader.js";
       var config = {
-        dataUrl: buildUrl + "/yuyunweb.data.unityweb",
-        frameworkUrl: buildUrl + "/yuyunweb.framework.js.unityweb",
-        codeUrl: buildUrl + "/yuyunweb.wasm.unityweb",
+        dataUrl: buildUrl + "/web.data.unityweb",
+        frameworkUrl: buildUrl + "/web.framework.js.unityweb",
+        codeUrl: buildUrl + "/web.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "yuyunweb",
+        productName: "yuyun",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
@@ -95,8 +95,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1366px";
-        canvas.style.height = "766px";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       loadingBar.style.display = "block";
@@ -107,6 +107,7 @@
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
+                      //代码里添加实例化
                 UnityIns = unityInstance;
                 initRecord();
                 loadingBar.style.display = "none";
@@ -119,7 +120,7 @@
             };
 
       document.body.appendChild(script);
-    // script里增加以下的代码
+        // script里增加以下的代码
 
       // 全局录音实例
       let RecorderIns = null;
@@ -225,6 +226,7 @@
         };
         reader.readAsDataURL(blob);
       }
+
     </script>
   </body>
 </html>

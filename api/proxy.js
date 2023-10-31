@@ -14,9 +14,10 @@ module.exports = (req, res) => {
   } else if (req.url.startsWith('/api3')) {
     target = 'http://tsn.baidu.com/text2audio';
     pathRewrite['^/api3'] = '/';
-  } else if (req.url.startsWith('/api4')) {
+  } else if (req.url.startsWith('/api4/')) {
+    // https://open.bigmodel.cn/api/paas/v3/model-api/
     target = 'https://open.bigmodel.cn/api/paas/v3/model-api/';
-    pathRewrite['^/api4'] = '/';
+    pathRewrite['^/api4/'] = '/';
   } else {
     // 如果没有匹配的请求路径，你可以根据需要进行其他处理或返回错误
     res.status(404).send('Not Found');
