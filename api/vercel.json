@@ -1,19 +1,19 @@
 {
     "rewrites": [
       {
-        "source": "/api1/(.*)",
-        "destination": "https://vop.baidu.com/server_api/$1"
+        "source": "/api1/server_api*",
+        "destination": "https://vop.baidu.com/server_api$1"
       },
       {
-        "source": "/api2/(.*)",
-        "destination": "https://aip.baidubce.com/oauth/2.0/token/$1"
+        "source": "/api2/oauth/2.0/token*",
+        "destination": "https://aip.baidubce.com/oauth/2.0/token$1"
       },
       {
-        "source": "/api3/(.*)",
-        "destination": "http://tsn.baidu.com/text2audio/$1"
+        "source": "/api3/text2audio*",
+        "destination": "http://tsn.baidu.com/text2audio$1"
       },
       {
-        "source": "/api4/(.*)",
+        "source": "/api4/api/paas/v3/model-api/*",
         "destination": "https://open.bigmodel.cn/api/paas/v3/model-api/$1"
       }
     ]
